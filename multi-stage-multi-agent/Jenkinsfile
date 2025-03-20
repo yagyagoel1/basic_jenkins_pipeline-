@@ -1,0 +1,19 @@
+pipelines {
+	agent none
+	stages {
+stage('backend'){
+	agent {
+	docker { image 'node:20-alpine' }
+	}
+steps {
+sh 'node --version'
+}
+}
+stage('frontend'){
+agent {
+docker { image 'node:20-alpine' }
+}
+steps{
+sh 'node --version'
+
+}}}}
